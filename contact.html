@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - MHA CAFE</title>
+  <link rel="stylesheet" href="Css/website.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="images/logo.jpeg" href="images/logo.jpeg">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('images/g.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .contact-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      width: 100%;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .contact-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: gold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .contact-info a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 12px 25px;
+      background-color: black;
+      color: gold;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: gold;
+      color: black;
+    }
+
+    .map-container {
+      margin-top: 30px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    nav.navbar {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: gold;
+    }
+
+    nav.navbar .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav.navbar ul li a {
+      color: gold;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      color: white;
+      text-shadow: 0 0 5px gold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MHA CAFE</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="card.html">Cart</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+<br>
+<br>
+  <section class="contact-section">
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-info">
+        <p>📞 Phone: <a href="tel:+60142827282">+60 14-282 7282</a></p>
+        <p>📧 Email: <a href="mailto:mhacafe0@gmail.com">mhacafe0@gmail.com</a></p>
+        <p>📍 Location: Jalan Mewah 88, Kuala Lumpur, Malaysia</p>
+        <p>🔗 Follow us:
+          <a href="https://www.facebook.com/share/19iJT32cos/" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com/mha_cafe?igsh=N3pnbnp1NGZ4N214&utm_source=ig_contact_invite" target="_blank">Instagram</a> |
+          <a href="https://www.tiktok.com/@mha.cafe?_t=ZS-8xm2WdTJYTh&_r=1" target="_blank">TikTok</a>
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.402560233033!2d101.69320722338463!3d3.1390030296032536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49a75b6ff47f%3A0x48e0ec9a5b5c0b15!2sKuala%20Lumpur!5e0!3m2!1sen!2smy!4v1610198197452!5m2!1sen!2smy"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 AMSYAR. All rights reserved.
+  </footer>
+
+</body>
+</html>

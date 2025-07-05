@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - MHA CAFE</title>
+  <link rel="stylesheet" href="Css/website.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="images/logo.jpeg" href="images/logo.jpeg">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: url('images/bg-gallery.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav.navbar {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: gold;
+    }
+
+    nav.navbar .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav.navbar ul li a {
+      color: gold;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      color: white;
+      text-shadow: 0 0 5px gold;
+    }
+
+    .gallery-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #bfa046;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-desc {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.65);
+      color: gold;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px 10px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-desc {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MHA CAFE</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="card.html">Cart</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+<br> 
+
+  <section class="gallery-section">
+    <h2 class="gallery-title">Our Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/interior.jpg" alt="Interior">
+        <div class="gallery-desc">Cafe Interior</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/12.jpg" alt="Interior">
+        <div class="gallery-desc">Cafe Interior</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/14.jpg" alt="Interior">
+        <div class="gallery-desc">Cafe Interior</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/17.jpg" alt="Barista">
+        <div class="gallery-desc">Our Professional Barista</div>
+      </div>
+       <div class="gallery-item">
+        <img src="images/15.jpg" alt="Barista">
+        <div class="gallery-desc">Our Professional Barista</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/16.jpg" alt="Barista">
+        <div class="gallery-desc">Our Professional Barista</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/ab.jpg" alt="Costumer">
+        <div class="gallery-desc">Review Costumers</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/j.jpg" alt="Costumer">
+        <div class="gallery-desc">Review Costumers</div>
+      </div>
+      <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/aa.jpg" alt="Costumer">
+        <div class="gallery-desc">Review Costumers</div>
+      </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 HATIB. All rights reserved.
+  </footer>
+
+  <audio id="bgm" src="audio/z.mp3" loop></audio>
+
+  <script src="java/java.js"></script>
+
+</body>
+</html>

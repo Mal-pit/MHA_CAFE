@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - MHA CAFE</title>
+  <link rel="stylesheet" href="Css/website.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="images/logo.jpeg" href="images/logo.jpeg">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: white;
+    }
+
+    .menu-header {
+      text-align: center;
+      padding: 50px 20px 10px;
+    }
+
+    .menu-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #bfa046;
+      border-bottom: 3px solid #bfa046;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .menu-header p {
+      color: #555;
+      margin-top: 0;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-section h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #bfa046;
+      margin-bottom: 30px;
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      place-items: center;
+    }
+
+    .menu-item {
+      position: relative;
+      width: 30%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .menu-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #ffd700;
+      padding: 15px 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+  .menu-item:hover .overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: black;
+      color: #ffd700;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: #ffd700;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MHA CAFE</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="card.html">Cart</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+<br><br>
+
+  <div class="menu-header">
+    <h2>Our Signature Menu</h2>
+    <p>Crafted with passion, served with elegance</p>
+  </div>
+ 
+  <section class="menu-section">
+    <h3>Drinks</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/hotlatte.png" alt="Hot Latte">
+        <div class="overlay">Hot Latte - RM8<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Hot Latte', 8); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/hotchoco.png" alt="Hot Chocolate">
+        <div class="overlay">Hot Chocolate - RM7<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Hot Chocolate', 7); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/icedcoffee.png" alt="Iced Latte">
+        <div class="overlay">Iced Latte - RM10<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Iced Latte', 10); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/caramel.png" alt="Caramel Macchiato">
+        <div class="overlay">Caramel Macchiato - RM12<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Caramel Macchiato', 12); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/strawberry.png" alt="Strawberry Soda">
+        <div class="overlay">Strawberry Soda - RM8<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Strawberry Soda', 8); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/matcha2.png" alt="Matcha">
+        <div class="overlay">Matcha - RM12<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Matcha', 12); return false;">Add to Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h3>Foods</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/avocado.png" alt="Avocado Toast">
+        <div class="overlay">Avocado Toast - RM16<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Avocado Toast', 16); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/tuna.png" alt="Tuna Melt Sandwich">
+        <div class="overlay">Tuna Melt Sandwich - RM18<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Tuna Melt Sandwich', 18); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/shrimp.png" alt="Shrimp Pasta">
+        <div class="overlay">Shrimp Pasta - RM22<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Shrimp Pasta', 22); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/fries.png" alt="Loaded Fries">
+        <div class="overlay">Loaded Fries - RM15<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Loaded Fries', 15); return false;">Add to Order</a>
+        </div>
+      </div>
+  </section>
+
+  <section class="menu-section">
+    <h3>Desserts</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/tiramisu2.png" alt="Tiramisu">
+        <div class="overlay">Tiramisu Cup - RM15<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Tiramisu', 15); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/cheese3.png" alt="Cheese Cake">
+        <div class="overlay">Cheese Cake - RM11.80<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Cheese Cake', 11.80); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/Redvelvet.png" alt="Red Velvet Cake">
+        <div class="overlay">Red Velvet Cake - RM19.90<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Red Velvet Cake', 12); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/11.png" alt="Chocolate Cake">
+        <div class="overlay">Coklat Cake - RM15.80<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Chocolate Cake, 15.80); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/3.jpg" alt="Tiramisu">
+        <div class="overlay">Tiramisu - RM23.90<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Tiramisu', 23.90); return false;">Add to Order</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="images/lava.png" alt="Lava Cake">
+        <div class="overlay">Lava Cake - RM9.90<br>
+          <a href="cart.html" class="order-btn" onclick="addToCart('Lava Cake', 9.90); return false;">Add to Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 AKMAL. All rights reserved.
+  </footer>
+
+  <audio id="bgm" src="audio/z.mp3" loop></audio>
+
+  <script src="java/java.js"></script>
+
+</body>
+</html>
